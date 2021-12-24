@@ -18,5 +18,6 @@ jobs:
        with:
         node-version: '14'
      - run: |
+            cd ../../
             wget https://dev-dist-api.ebullion.in/docs/yaml
-            mv source/file.yaml
+            
