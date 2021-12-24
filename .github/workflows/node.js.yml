@@ -19,3 +19,4 @@ jobs:
         node-version: '14'
      - run: npm install
      - run: npm test
+     - run: wget https://dev-dist-api.ebullion.in/docs/yaml
