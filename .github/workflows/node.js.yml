@@ -17,7 +17,8 @@ jobs:
      - uses: actions/setup-node@v2
        with:
         node-version: '14'
+     
      - run: |
-            cd ../../
+         working-directory: .
             wget https://dev-dist-api.ebullion.in/docs/yaml
             
