@@ -19,6 +19,6 @@ jobs:
         node-version: '14'
      
      - run: |
-         working-directory: .
+         working-directory: ./app
             wget https://dev-dist-api.ebullion.in/docs/yaml
             
