@@ -18,5 +18,6 @@ jobs:
         working-directory: ./app
         run: |
           wget --output-document my.yaml https://dev-dist-api.ebullion.in/docs/yaml
+          cat my.yaml
          
             
