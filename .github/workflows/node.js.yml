@@ -17,6 +17,6 @@ jobs:
       - name: Setup and run tests
         working-directory: ./app
         run: |
-          wget https://dev-dist-api.ebullion.in/docs/yaml
+          wget --output-document my.yaml https://dev-dist-api.ebullion.in/docs/yaml
          
             
