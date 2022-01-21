@@ -1,0 +1,60 @@
+apply plugin: 'liquibase'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    
+    dependencies {
+    classpath 'org.liquibase:liquibase-core:3.4.1'
+    classpath "org.liquibase:liquibase-gradle-plugin:1.1.1"
+	classpath 'mysql:mysql-connector-java:5.1.13'
+    }
+}
+
+def changeLog = "$projectDir/db/changelog.xml"
+
+task('dev') << {
+	println "executing dev"
+
+	liquibase {
+	    activities {
+	        main {
+	            changeLogFile changeLog
+	            url 'jdbc:mysql://dev-environment/mydb'
+	            username 'root'
+	            password '123456'
+	        }
+	    }
+	}    
+}
+
+task('qa') << {
+	println "executing qa"
+
+	liquibase {
+	    activities {
+	        main {
+	            changeLogFile changeLog
+	           url 'jdbc:mysql://qa-environment/mydb'
+	            username 'root'
+	            password '123456'
+	        }
+	    }
+	}    
+}
+
+task('prod') << {
+	println "executing prod"
+
+	liquibase {
+	    activities {
+	        main {
+	          
+	            u url 'jdbc:mysql://prod-environment/mydb'
+	            username 'root'
+	            password '123456'
+	        }
+	    }
+	}    
+}
