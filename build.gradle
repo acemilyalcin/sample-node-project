@@ -22,8 +22,8 @@ task('dev') << {
 	        main {
 	            changeLogFile changeLog
 	            url 'jdbc:mysql://dev-environment/mydb'
-	            username 'root'
-	            password '123456'
+	            username 'admin'
+	            password 'hpWNQu6q6M7dL7'
 	        }
 	    }
 	}    
@@ -37,8 +37,8 @@ task('qa') << {
 	        main {
 	            changeLogFile changeLog
 	           url 'jdbc:mysql://qa-environment/mydb'
-	            username 'root'
-	            password '123456'
+	            username 'admin'
+	            password 'hpWNQu6q6M7dL7'
 	        }
 	    }
 	}    
@@ -52,8 +52,8 @@ task('prod') << {
 	        main {
 	          
 	            u url 'jdbc:mysql://prod-environment/mydb'
-	            username 'root'
-	            password '123456'
+	            username 'admin'
+	            password 'hpWNQu6q6M7dL7'
 	        }
 	    }
 	}    
