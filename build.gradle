@@ -8,7 +8,7 @@ buildscript {
     dependencies {
     classpath 'org.liquibase:liquibase-core:3.4.1'
     classpath "org.liquibase:liquibase-gradle-plugin:1.1.1"
-	classpath 'org.postgresql:postgresql:42.2.0'
+	classpath 'org.postgresql:postgresql:42.3.1'
     }
 }
 
