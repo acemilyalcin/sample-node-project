@@ -25,7 +25,7 @@ task Prod {
 	    activities {
 	        main {
 	            changeLogFile changeLog
-		    url 'jdbc:postgresql://eb-preprod-pgsql-db.cxxummfqywoe.ap-south-1.rds.amazonaws.com:5432/ebullion_dev'
+		    url 'jdbc:postgresql://eb-preprod-pgsql-db.cxxummfqywoe.ap-south-1.rds.amazonaws.com:5432/ebullion_dev?user=ebuser&password=Aqtu23f9kLgw'
 	            username 'ebuser'
 	            password 'Aqtu23f9kLgw'
 	        }
