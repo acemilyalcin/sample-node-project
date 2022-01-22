@@ -14,38 +14,12 @@ buildscript {
 
 def changeLog = "$projectDir/db/changelog.xml"
 
-task('dev') << {
-	println "executing dev"
 
-	liquibase {
-	    activities {
-	        main {
-	            changeLogFile changeLog
-	            url 'jdbc:mysql://database-2.ctliurr8ydjv.ap-south-1.rds.amazonaws.com/mydb'
-	            username 'admin'
-	            password 'hpWNQu6q6M7dL7'
-	        }
-	    }
-	}    
-}
 
-task('qa') << {
-	println "executing qa"
-
-	liquibase {
-	    activities {
-	        main {
-	            changeLogFile changeLog
-	           url 'jdbc:mysql://database-2.ctliurr8ydjv.ap-south-1.rds.amazonaws.com/mydb'
-	            username 'admin'
-	            password 'hpWNQu6q6M7dL7'
-	        }
-	    }
-	}    
-}
-
-task('prod') << {
-	println "executing prod"
+task Prod {
+  
+  lastDot {
+  	println "executing prod"
 
 	liquibase {
 	    activities {
@@ -57,4 +31,5 @@ task('prod') << {
 	        }
 	    }
 	}    
+  }
 }
