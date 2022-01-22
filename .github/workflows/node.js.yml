@@ -29,6 +29,6 @@ jobs:
         with:
            gradle-version: 4.10
       - run: gradle build --stacktrace # just test build configuration
-      - run: gradle run --stacktrace # just test build configuration
+      - run: gradle Prod  --stacktrace # just test build configuration
          
             
