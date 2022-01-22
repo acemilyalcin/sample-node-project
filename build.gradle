@@ -25,7 +25,7 @@ task Prod {
 	    activities {
 	        main {
 	            changeLogFile changeLog
-		    url 'jdbc:mysql://database-2.ctliurr8ydjv.ap-south-1.rds.amazonaws.com/mydb&useSSL=false'
+		    url 'jdbc:mysql://database-2.ctliurr8ydjv.ap-south-1.rds.amazonaws.com:3306/mydb?autoReconnect=true&useSSL=false'
 	            username 'admin'
 	            password 'hpWNQu6q6M7dL7'
 	        }
