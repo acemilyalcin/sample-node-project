@@ -19,5 +19,12 @@ jobs:
         run: |
           wget --output-document my.yaml https://dev-dist-api.ebullion.in/docs/yaml
           cat my.yaml
+      - uses: actions/setup-java@v2
+        with:
+          java-version: 11
+      - uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: release-candidate
+      - run: gradle build --dry-run # just test build configuration
          
             
