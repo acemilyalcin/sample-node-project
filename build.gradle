@@ -18,7 +18,7 @@ def changeLog = "$projectDir/db/changelog.xml"
 
 task Prod {
   
-  lastDot {
+  doLast  {
   	println "executing prod"
 
 	liquibase {
