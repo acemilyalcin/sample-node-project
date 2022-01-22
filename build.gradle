@@ -21,7 +21,7 @@ task('dev') << {
 	    activities {
 	        main {
 	            changeLogFile changeLog
-	            url 'jdbc:mysql://dev-environment/mydb'
+	            url 'jdbc:mysql://database-2.ctliurr8ydjv.ap-south-1.rds.amazonaws.com/mydb'
 	            username 'admin'
 	            password 'hpWNQu6q6M7dL7'
 	        }
@@ -36,7 +36,7 @@ task('qa') << {
 	    activities {
 	        main {
 	            changeLogFile changeLog
-	           url 'jdbc:mysql://qa-environment/mydb'
+	           url 'jdbc:mysql://database-2.ctliurr8ydjv.ap-south-1.rds.amazonaws.com/mydb'
 	            username 'admin'
 	            password 'hpWNQu6q6M7dL7'
 	        }
@@ -51,7 +51,7 @@ task('prod') << {
 	    activities {
 	        main {
 	          
-	            u url 'jdbc:mysql://prod-environment/mydb'
+	            u url 'jdbc:mysql://database-2.ctliurr8ydjv.ap-south-1.rds.amazonaws.com/mydb'
 	            username 'admin'
 	            password 'hpWNQu6q6M7dL7'
 	        }
