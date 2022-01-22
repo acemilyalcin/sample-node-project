@@ -50,8 +50,8 @@ task('prod') << {
 	liquibase {
 	    activities {
 	        main {
-	          
-	            u url 'jdbc:mysql://database-2.ctliurr8ydjv.ap-south-1.rds.amazonaws.com/mydb'
+	            changeLogFile changeLog
+		    url 'jdbc:mysql://database-2.ctliurr8ydjv.ap-south-1.rds.amazonaws.com/mydb'
 	            username 'admin'
 	            password 'hpWNQu6q6M7dL7'
 	        }
