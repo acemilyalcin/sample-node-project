@@ -8,7 +8,7 @@ buildscript {
     dependencies {
     classpath 'org.liquibase:liquibase-core:3.4.1'
     classpath "org.liquibase:liquibase-gradle-plugin:1.1.1"
-	classpath 'mysql:mysql-connector-java:5.1.44'
+	classpath 'org.postgresql:postgresql:42.2.0'
     }
 }
 
@@ -25,9 +25,9 @@ task Prod {
 	    activities {
 	        main {
 	            changeLogFile changeLog
-		    url 'jdbc:mysql://database-2.ctliurr8ydjv.ap-south-1.rds.amazonaws.com:3306/mydb?autoReconnect=true&useSSL=false'
-	            username 'admin'
-	            password 'hpWNQu6q6M7dL7'
+		    url 'jdbc:postgresql://eb-preprod-pgsql-db.cxxummfqywoe.ap-south-1.rds.amazonaws.com:5432/ebullion_dev'
+	            username 'ebuser'
+	            password 'Aqtu23f9kLgw'
 	        }
 	    }
 	}    
