@@ -1,7 +1,6 @@
 -- liquibase formatted sql
 
 -- changeset liquibase:1
--- DROP TABLE IF EXISTS "user_master_test";
 create table account."user_master_test" (
     "user_id" varchar(255) PRIMARY KEY,
     "mobile" varchar(20) not null,
