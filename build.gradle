@@ -1,4 +1,8 @@
-apply plugin: 'liquibase'
+plugins {
+    id "org.flywaydb.flyway" version "8.4.2"
+}
+
+apply plugin: 'java'
 
 buildscript {
     repositories {
@@ -6,9 +10,8 @@ buildscript {
     }
     
     dependencies {
-    classpath 'org.liquibase:liquibase-core:3.4.1'
-    classpath "org.liquibase:liquibase-gradle-plugin:1.1.1"
-	classpath 'org.postgresql:postgresql:42.3.1'
+        compile "org.flywaydb:flyway-core:8.4.2"
+    flywayMigration "com.mygroupid:my-lib:1.2.3"
     }
 }
 
@@ -17,19 +20,19 @@ def changeLog = "$projectDir/db/changelog.xml"
 
 
 task Prod {
-  
-  doLast  {
-  	println "executing prod"
 
-	liquibase {
-	    activities {
-	        main {
-	            changeLogFile changeLog
-		    url 'jdbc:postgresql://eb-preprod-pgsql-db.cxxummfqywoe.ap-south-1.rds.amazonaws.com:5432/ebullion_dev?user=ebuser&password=Aqtu23f9kLgw'
-	            username 'ebuser'
-	            password 'Aqtu23f9kLgw'
-	        }
-	    }
-	}    
-  }
+doLast {
+        println 'Hello Gradle to copy'
+        flyway {
+            println "Flyway: "
+            driver = 'org.postgresql.Driver'
+            url = 'jdbc:postgresql://eb-preprod-pgsql-db.cxxummfqywoe.ap-south-1.rds.amazonaws.com:5432/ebullion_dev'
+            user = 'ebuser'
+	    password = 'Aqtu23f9kLgw'
+            locations = ['filesystem:db/scripts']
+            println "Flyway: $locations"
+        }
+    }
+  
+
 }
