@@ -4,8 +4,12 @@
   "description": "Sample Node.js Project",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app.js"
   },
+  dependencies: {
+    "express": "^4.17.2"
+  }
   "author": "Adem Cemil YALCIN",
   "license": "ISC"
 }
