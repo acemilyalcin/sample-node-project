@@ -1,17 +1,23 @@
 version: 0.0
 os: linux
 files:
-  - source: /index.html
-    destination: /var/www/html/
+  - source: /
+    destination: /var/www/html/WordPress
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies
+    - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
-    - location: scripts/start_server
+  AfterInstall:
+    - location: scripts/change_permissions.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: scripts/start_server.sh
+    - location: scripts/create_test_db.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/stop_server
+    - location: scripts/stop_server.sh
       timeout: 300
       runas: root
