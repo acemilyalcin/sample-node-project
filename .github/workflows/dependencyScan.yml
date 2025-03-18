@@ -1,0 +1,39 @@
+name: Dependency Vulnerability Check
+
+on:
+
+  pull_request:
+    types: [opened, synchronize, reopened]  # Trigger on PR creation, updates, and reopen
+jobs:
+  dependency-check:
+    name: Dependency Vulnerability Check
+    runs-on: ubuntu-latest
+    
+    steps:  
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Node.js project (package-lock.json)
+      - name: Check for Node.js project
+        id: node_detected
+        run: |
+          if [ -f "package-lock.json" ]; then
+            echo "Node.js project detected."
+            echo "is_node=true" >> $GITHUB_ENV
+          else
+            echo "No Node.js project found."
+            echo "is_node=false" >> $GITHUB_ENV
+          fi
+
+      - name: Running NPM Audit
+        if: env.is_node == 'true'
+        run: |
+          if [ -f "package-lock.json" ]; then
+            echo "Using npm for dependency checks"
+            npm install
+            npm audit --production --json
+          fi
+
+          
+          
+
