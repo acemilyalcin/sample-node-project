@@ -1,4 +1,9 @@
-/* Custom styles can be added to this file */
 span {
     font-size: 50px;
+    color: red;              /* Text color */
+    font-weight: bold;       /* Makes the text bold */
+    background-color: yellow;/* Background color */
+    padding: 10px;           /* Space inside the span */
+    border-radius: 5px;      /* Rounded corners */
+    text-shadow: 2px 2px 5px gray; /* Shadow behind the text */
 }
