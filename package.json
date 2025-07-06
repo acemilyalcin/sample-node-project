@@ -4,9 +4,7 @@
   "description": "Sample Node.js Project",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo 'Building the project...' && exit 0" // Replace this with your actual build command
+    "start": "node app.js"
   },
   "author": "Adem Cemil YALCIN",
   "license": "ISC",
