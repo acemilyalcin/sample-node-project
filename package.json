@@ -4,6 +4,7 @@
   "description": "Sample Node.js Project",
   "main": "app.js",
   "scripts": {
+    "test": "mocha test.js",
     "start": "node app.js"
   },
   "author": "Adem Cemil YALCIN",
@@ -11,5 +12,10 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "chai": "^6.0.1",
+    "mocha": "^11.7.2",
+    "supertest": "^7.1.4"
   }
 }
