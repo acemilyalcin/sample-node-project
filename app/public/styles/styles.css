@@ -1,4 +1,88 @@
-/* Custom styles can be added to this file */
-span {
-    font-size: 50px;
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #000;  /* black background like the SAO site */
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.site-header .logo img {
+  height: 50px;
+  width: auto;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav ul li a {
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+  color: #ccc;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero-section .hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-section .hero-content p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.hero-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.hero-images img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid #fff;
+}
+
+.site-footer {
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+}
+
+.site-footer .footer-links a {
+  margin: 0 10px;
+}
+
+.site-footer .copyright {
+  margin-top: 10px;
+  font-size: 14px;
 }
