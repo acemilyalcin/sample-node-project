@@ -4,12 +4,17 @@
   "description": "Sample Node.js Project",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "jest --watch"
   },
   "author": "Adem Cemil YALCIN",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "supertest": "^7.1.4"
   }
 }

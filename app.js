@@ -11,6 +11,8 @@ app.use(express.static(__dirname + '/app/public')); // Public folder containing 
 
 require('./app/routes')(app); // Routes are imported
 
-http.createServer(app).listen(app.get('port'), function(){
+const server = http.createServer(app).listen(app.get('port'), function(){
 	console.log('The application is running on port ' + app.get('port'));
 }); // Http server is created
+
+module.exports = server;
